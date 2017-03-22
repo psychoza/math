@@ -9,29 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var ProblemComponent = (function () {
-    function ProblemComponent() {
-        this.generateProblem = function () {
-            this.number1 = this.generateRandomNumber();
-            this.number2 = this.generateRandomNumber();
-            this.sum = this.number1 + this.number2;
-            this.wrongSum1 = this.sum - 1;
-            this.wrongSum2 = this.sum + 1;
-        };
-        this.generateRandomNumber = function () {
-            return Math.floor(Math.random() * 6);
-        };
-        this.generateProblem();
+var LevelComponent = (function () {
+    function LevelComponent() {
+        this.description = 'Level 1';
     }
-    ;
-    ProblemComponent = __decorate([
+    LevelComponent = __decorate([
         core_1.Component({
-            selector: 'problem',
+            selector: 'math',
             template: "<h1>Hello {{name}}</h1>",
         }), 
         __metadata('design:paramtypes', [])
-    ], ProblemComponent);
-    return ProblemComponent;
+    ], LevelComponent);
+    return LevelComponent;
 }());
-exports.ProblemComponent = ProblemComponent;
-//# sourceMappingURL=problem.component.js.map
+exports.LevelComponent = LevelComponent;
+//# sourceMappingURL=level.component.js.map

@@ -9,15 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var problem_component_1 = require('./problem.component');
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Jesse';
-        this.score = 1;
+        this.name = 'Tristan';
+        this.score = 0;
+        this.currentProblem = new problem_component_1.ProblemComponent();
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'math',
-            template: "<h1>Hello {{name}}</h1>",
+            template: "\n  <div class=container>\n    <div class=row>\n      <div class=col-sm-12>\n        <h1>Hello {{name}}</h1>\n      </div>\n    </div>\n    <div class=row>\n      <div class=col-sm-3>\n        <h2>{{currentProblem.number1}} + {{currentProblem.number2}} = </h2>\n      </div>\n      <div class=col-sm-3>\n        <input type=button value={{currentProblem.sum}}/>\n      </div>\n      <div class=col-sm-3>\n        <input type=button value={{currentProblem.wrongSum1}}/>\n      </div>\n      <div class=col-sm-3>\n        <input type=button value={{currentProblem.wrongSum2}} (click)=currentProblem.generateProblem()/>\n      </div>\n    </div>\n  </div>\n  ",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

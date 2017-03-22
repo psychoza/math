@@ -36,5 +36,14 @@ describe('ProblemComponent', function () {
         expect(comp.wrongSum2).toBeDefined('wrongSum2 should be defined');
         expect(comp.wrongSum2).toBe(comp.sum + 1, 'wrongSum1 should be the sum plus 1');
     });
+    it('should have a generateProblem method', function () {
+        expect(comp.generateProblem).toBeDefined('it should exist');
+    });
+    it('should have a generateRandomNumber method', function () {
+        expect(comp.generateRandomNumber).toBeDefined('it should exist');
+        var result = comp.generateRandomNumber();
+        expect(result).toBeGreaterThanOrEqual(0, 'it should not generate a number below 0');
+        expect(result).toBeLessThanOrEqual(5, 'it should not generate a number greater than 5');
+    });
 });
 //# sourceMappingURL=problem.component.spec.js.map
